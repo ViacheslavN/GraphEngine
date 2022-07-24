@@ -33,7 +33,9 @@ namespace GraphEngine
 
 			virtual const astr& GetName() const = 0;
 			virtual const astr& GetText() const = 0;
-			virtual void        SetText(const astr&) = 0;
+			virtual void        SetText(const astr& textUtf8) = 0;
+			virtual void        SetText(const wstr&) = 0;
+
 
 			virtual const astr&   GetCDATA() const = 0;
 			virtual void          SetCDATA(const astr& cdata) = 0;
@@ -49,7 +51,8 @@ namespace GraphEngine
 			virtual void AddPropertyIntU64(const astr& name, uint64_t value) = 0;
 			virtual void AddPropertyDouble(const astr& name, double value) = 0;
 			virtual void AddPropertyBool(const astr& name, bool value) = 0;
-			virtual void AddPropertyString(const astr& name, const astr& value) = 0;
+			virtual void AddPropertyString(const astr& name, const astr& valueUtf8) = 0;
+			virtual void AddPropertyWString(const astr& name, const wstr& value) = 0;
 
 
 			virtual bool IsPropertyExists(const astr& name) const = 0;
@@ -65,7 +68,8 @@ namespace GraphEngine
 			virtual uint64_t GetPropertyIntU64(const astr& name, uint64_t defValue) const = 0;
 			virtual double  GetPropertyDouble(const astr& name, double defValue) const = 0;
 			virtual bool  GetPropertyBool(const astr& name, bool defValue) const = 0;
-			virtual astr GetPropertyString(const astr& name, const  astr& defValue) const = 0;
+			virtual astr GetPropertyString(const astr& name, const  astr& defValueUtf8) const = 0;
+			virtual wstr GetPropertyWString(const astr& name, const  wstr& defValue) const = 0;
 
 
 			virtual int16_t	GetPropertyInt16(const astr& name) const = 0;
@@ -77,6 +81,7 @@ namespace GraphEngine
 			virtual double  GetPropertyDouble(const astr& name) const = 0;
 			virtual bool  GetPropertyBool(const astr& name) const = 0;
 			virtual astr GetPropertyString(const astr& name) const = 0;
+			virtual wstr GetPropertyWString(const astr& name) const = 0;
 
 		};
 

@@ -95,14 +95,19 @@ namespace GraphEngine
 
 			const astr& CXMLNode::GetText() const
 			{
-				return m_text;
+				return m_textUtf8;
 			}
 
 			void CXMLNode::SetText(const astr& text)
 			{
-				m_text = text;
+				m_textUtf8 = text;
 			}
 
+			void  CXMLNode::SetText(const wstr& unicode)
+			{
+				m_textUtf8 = CommonLib::StringEncoding::str_w2utf8(unicode);
+			}
+ 
 			const astr& CXMLNode::GetCDATA() const
 			{
 				return m_caData;
@@ -177,6 +182,10 @@ namespace GraphEngine
 				}
 			}
 
+			void CXMLNode::AddPropertyWString(const astr& name, const wstr& value)
+			{
+				AddPropertyString(name, CommonLib::StringEncoding::str_w2utf8(value));
+			}
 
 			bool CXMLNode::IsPropertyExists(const astr& name) const
 			{
@@ -249,6 +258,18 @@ namespace GraphEngine
 				return GetProperyT<astr>(name, defValue);
 			}
 
+			wstr CXMLNode::GetPropertyWString(const astr& name, const  wstr& defValue) const
+			{
+				if (!IsPropertyExists(name))
+					return defValue;
+
+				wstr unicode;
+				CommonLib::StringEncoding::str_utf82w(GetProperyT<astr>(name), unicode);
+
+				return unicode;
+			}
+
+
 
 			int16_t	CXMLNode::GetPropertyInt16(const astr& name) const
 			{
@@ -295,6 +316,14 @@ namespace GraphEngine
 				return GetProperyT<astr>(name);
 			}
 
+			wstr CXMLNode::GetPropertyWString(const astr& name) const
+			{
+				wstr unicode;
+				CommonLib::StringEncoding::str_utf82w(GetProperyT<astr>(name), unicode);
+
+				return unicode;
+			}
+ 
 
 			void CXMLNode::Save(CommonLib::IWriteStream *pSteam)
 			{
@@ -302,7 +331,7 @@ namespace GraphEngine
 				{
 					astr sName;
 					sName = CommonLib::str_format::AStrFormatSafeT("<%1", m_name);
-					if (m_Props.empty() && m_text.empty() && m_caData.empty() && m_Nodes.empty())
+					if (m_Props.empty() && m_textUtf8.empty() && m_caData.empty() && m_Nodes.empty())
 					{
 						sName += "/>\n";
 						pSteam->Write(sName.c_str());
@@ -323,7 +352,7 @@ namespace GraphEngine
 						}
 
 					}
-					if (m_text.empty() && m_caData.empty() && m_Nodes.empty())
+					if (m_textUtf8.empty() && m_caData.empty() && m_Nodes.empty())
 					{
 						pSteam->Write("/>\n");
 						return;
@@ -338,7 +367,7 @@ namespace GraphEngine
 							((CXMLNode*)(m_Nodes[i].get()))->Save(pSteam);
 						}
 					}
-					if (!m_text.empty())
+					if (!m_textUtf8.empty())
 					{
 						if (!bClose)
 						{
@@ -346,7 +375,7 @@ namespace GraphEngine
 							bClose = true;
 						}
 
-						pSteam->Write(m_text.c_str());
+						pSteam->Write(m_textUtf8.c_str());
 					}
 
 					if (!m_caData.empty())

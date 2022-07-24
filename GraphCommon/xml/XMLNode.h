@@ -27,7 +27,8 @@ namespace GraphEngine
 				virtual void        SetName(const astr& name);
 
 				virtual const astr&  GetText() const;
-				virtual void  SetText(const astr& text);
+				virtual void  SetText(const astr& textUtf8);
+				virtual void  SetText(const wstr& unicode);
 
 				virtual const astr&  GetCDATA() const;
 				virtual void  SetCDATA(const  astr& cdata);
@@ -43,7 +44,8 @@ namespace GraphEngine
 				virtual void AddPropertyIntU64(const astr& name, uint64_t value);
 				virtual void AddPropertyDouble(const astr& name, double value);
 				virtual void AddPropertyBool(const astr& name, bool value);
-				virtual void AddPropertyString(const astr& name, const astr& value);
+				virtual void AddPropertyString(const astr& name, const astr& valueUtf8);
+				virtual void AddPropertyWString(const astr& name, const wstr& value);
 
 
 				virtual bool IsPropertyExists(const astr& name) const;
@@ -60,6 +62,7 @@ namespace GraphEngine
 				virtual double  GetPropertyDouble(const astr& name, double defValue) const;
 				virtual bool  GetPropertyBool(const astr& name, bool defValue) const;
 				virtual astr GetPropertyString(const astr& name, const  astr& defValue) const;
+				virtual wstr GetPropertyWString(const astr& name, const  wstr& defValue) const;
 
 
 				virtual int16_t	GetPropertyInt16(const astr& name) const;
@@ -71,6 +74,7 @@ namespace GraphEngine
 				virtual double  GetPropertyDouble(const astr& name) const;
 				virtual bool  GetPropertyBool(const astr& name) const;
 				virtual astr GetPropertyString(const astr& name) const;
+				virtual wstr GetPropertyWString(const astr& name) const;
 
 				void Save(CommonLib::IWriteStream *pSteam);
 			private:
@@ -103,7 +107,7 @@ namespace GraphEngine
 			private:
 
 				astr m_name;
-				astr m_text;
+				astr m_textUtf8;
 				astr m_caData;
 
 				std::weak_ptr<IXMLNode> m_ptrParent;
