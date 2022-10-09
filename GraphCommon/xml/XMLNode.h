@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../GraphCommon.h"
+#include "xml.h"
 #include "../../../CommonLib/str/convertToString.h"
 
 namespace GraphEngine

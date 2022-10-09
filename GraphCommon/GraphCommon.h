@@ -9,39 +9,26 @@ namespace GraphEngine
 	namespace GraphCommon
 	{
 
-		typedef std::shared_ptr<class IXMLNode> IXMLNodePtr;
-		typedef std::shared_ptr<class IXMLDoc> IXMLDocPtr;
+		typedef std::shared_ptr<class ISerializeObj> ISerializeObjPtr;
 
-		class IXMLNode
+
+		class ISerializeObj
 		{
 		public:
-
-			IXMLNode() {}
-			virtual ~IXMLNode() {}
-
-			virtual IXMLNodePtr	CreateChildNode(const astr& name) = 0;
-			virtual uint32_t	GetChildCnt() const = 0;
-			virtual IXMLNodePtr	GetChild(uint32_t nIndex) const = 0;
-			virtual IXMLNodePtr	GetChild(const astr& name) const = 0;
-			virtual std::vector<IXMLNodePtr> GetChilds(const astr& name) const = 0;
-			virtual bool	IsChildExists(const astr& name) const = 0;
-			
-
-
-			virtual IXMLNodePtr	GetParent() const = 0;
-				
+			ISerializeObj() {}
+			virtual ~ISerializeObj() {}
 
 			virtual const astr& GetName() const = 0;
-			virtual const astr& GetText() const = 0;
-			virtual void        SetText(const astr& textUtf8) = 0;
-			virtual void        SetText(const wstr&) = 0;
+			virtual void       SetName(const astr&  name) = 0;
+			virtual ISerializeObjPtr   CreateChildNode(const astr& name) const = 0;
+			virtual uint32_t	GetChildCnt() const = 0;
+			virtual ISerializeObjPtr	GetChild(uint32_t nIndex) const = 0;
+			virtual ISerializeObjPtr	GetChild(const astr& name) const = 0;
+			virtual std::vector<ISerializeObjPtr> GetChilds(const astr& name) const = 0;
+			virtual bool	IsChildExists(const astr& name) const = 0;
 
-
-			virtual const astr&   GetCDATA() const = 0;
-			virtual void          SetCDATA(const astr& cdata) = 0;
-
-			virtual	void GetBlobCDATA(CommonLib::Data::TVecBuffer& data) const = 0;
-			virtual void SetBlobCDATA(const byte_t* data, size_t size) = 0;
+			virtual	void GetBlob(CommonLib::Data::TVecBuffer& data) const = 0;
+			virtual void SetBlob(const byte_t* data, size_t size) = 0;
 
 			virtual void AddPropertyInt16(const  astr& name, int16_t value) = 0;
 			virtual void AddPropertyInt16U(const astr& name, uint16_t value) = 0;
@@ -81,25 +68,6 @@ namespace GraphEngine
 			virtual double  GetPropertyDouble(const astr& name) const = 0;
 			virtual bool  GetPropertyBool(const astr& name) const = 0;
 			virtual astr GetPropertyString(const astr& name) const = 0;
-			virtual wstr GetPropertyWString(const astr& name) const = 0;
-
-		};
-
-		class IXMLDoc
-		{
-		public:
-			IXMLDoc() {}
-			virtual ~IXMLDoc() {}
-
-			virtual void  Open(const astr& xml) = 0;
-			virtual void  Open(CommonLib::IReadStream* pStream) = 0;
-
-			virtual void  Save(const astr& xml) = 0;
-			virtual void  Save(CommonLib::IWriteStream* pStream) = 0;
-
-			virtual IXMLNodePtr	 GetNodes() const = 0;
-			virtual void Clear() = 0;
-
 		};
 	}
 }

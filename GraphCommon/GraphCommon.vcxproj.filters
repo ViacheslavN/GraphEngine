@@ -16,6 +16,9 @@
     <Filter Include="XML">
       <UniqueIdentifier>{4b972d73-9810-45a6-9648-9caadc252762}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Serialize">
+      <UniqueIdentifier>{245c0346-234f-450e-9d5f-5841dcc17108}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -36,6 +39,12 @@
     <ClInclude Include="xml\XMLDoc.h">
       <Filter>XML</Filter>
     </ClInclude>
+    <ClInclude Include="xml\xml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialize\SerializeXML.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GraphCommon.cpp">
@@ -52,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="xml\XMLDoc.cpp">
       <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="Serialize\SerializeXML.cpp">
+      <Filter>Serialize</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
