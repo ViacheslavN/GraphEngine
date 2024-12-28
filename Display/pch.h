@@ -7,7 +7,15 @@
 #ifndef PCH_H
 #define PCH_H
 
-// add headers that you want to pre-compile here
-#include "framework.h"
+ 
+
+#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+#include "../../CommonLib/CommonLib.h"
+#include "../../CommonLib/data/ByteArray.h"
+#include "../../CommonLib/stream/MemoryStream.h"
+#include "../../CommonLib/alloc/alloc.h"
+#include "../../CommonLib/exception/exc_base.h"
+
+#include "../GraphCommon/GraphCommon.h"
 
 #endif //PCH_H

@@ -91,6 +91,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>F:\work\MyProject\GraphEngine\ThirdParty\freetype\include;../../ThirdParty/freetype/include/freetype</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -107,6 +108,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>F:\work\MyProject\GraphEngine\ThirdParty\freetype\include;../../ThirdParty/freetype/include/freetype</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,6 +126,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>F:\work\MyProject\GraphEngine\ThirdParty\freetype\include;../../ThirdParty/freetype/include/freetype</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -143,6 +146,7 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>F:\work\MyProject\GraphEngine\ThirdParty\freetype\include;../../ThirdParty/freetype/include/freetype</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,17 +156,352 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="agg\agg_alpha_mask_u8.h" />
+    <ClInclude Include="agg\agg_arc.h" />
+    <ClInclude Include="agg\agg_array.h" />
+    <ClInclude Include="agg\agg_arrowhead.h" />
+    <ClInclude Include="agg\agg_basics.h" />
+    <ClInclude Include="agg\agg_bezier_arc.h" />
+    <ClInclude Include="agg\agg_bitset_iterator.h" />
+    <ClInclude Include="agg\agg_blur.h" />
+    <ClInclude Include="agg\agg_bounding_rect.h" />
+    <ClInclude Include="agg\agg_bspline.h" />
+    <ClInclude Include="agg\agg_clip_liang_barsky.h" />
+    <ClInclude Include="agg\agg_color_gray.h" />
+    <ClInclude Include="agg\agg_color_rgba.h" />
+    <ClInclude Include="agg\agg_config.h" />
+    <ClInclude Include="agg\agg_conv_adaptor_vcgen.h" />
+    <ClInclude Include="agg\agg_conv_adaptor_vcgen_int.h" />
+    <ClInclude Include="agg\agg_conv_adaptor_vpgen.h" />
+    <ClInclude Include="agg\agg_conv_bspline.h" />
+    <ClInclude Include="agg\agg_conv_clip_polygon.h" />
+    <ClInclude Include="agg\agg_conv_clip_polyline.h" />
+    <ClInclude Include="agg\agg_conv_close_polygon.h" />
+    <ClInclude Include="agg\agg_conv_concat.h" />
+    <ClInclude Include="agg\agg_conv_contour.h" />
+    <ClInclude Include="agg\agg_conv_curve.h" />
+    <ClInclude Include="agg\agg_conv_dash.h" />
+    <ClInclude Include="agg\agg_conv_dash_int.h" />
+    <ClInclude Include="agg\agg_conv_gpc.h" />
+    <ClInclude Include="agg\agg_conv_marker.h" />
+    <ClInclude Include="agg\agg_conv_marker_adaptor.h" />
+    <ClInclude Include="agg\agg_conv_segmentator.h" />
+    <ClInclude Include="agg\agg_conv_shorten_path.h" />
+    <ClInclude Include="agg\agg_conv_smooth_poly1.h" />
+    <ClInclude Include="agg\agg_conv_stroke.h" />
+    <ClInclude Include="agg\agg_conv_stroke_int.h" />
+    <ClInclude Include="agg\agg_conv_transform.h" />
+    <ClInclude Include="agg\agg_conv_unclose_polygon.h" />
+    <ClInclude Include="agg\agg_curves.h" />
+    <ClInclude Include="agg\agg_dda_line.h" />
+    <ClInclude Include="agg\agg_ellipse.h" />
+    <ClInclude Include="agg\agg_ellipse_bresenham.h" />
+    <ClInclude Include="agg\agg_embedded_raster_fonts.h" />
+    <ClInclude Include="agg\agg_font_cache_manager.h" />
+    <ClInclude Include="agg\agg_font_freetype.h" />
+    <ClInclude Include="agg\agg_gamma_functions.h" />
+    <ClInclude Include="agg\agg_gamma_lut.h" />
+    <ClInclude Include="agg\agg_glyph_raster_bin.h" />
+    <ClInclude Include="agg\agg_gradient_lut.h" />
+    <ClInclude Include="agg\agg_gsv_text.h" />
+    <ClInclude Include="agg\agg_image_accessors.h" />
+    <ClInclude Include="agg\agg_image_filters.h" />
+    <ClInclude Include="agg\agg_line_aa_basics.h" />
+    <ClInclude Include="agg\agg_math.h" />
+    <ClInclude Include="agg\agg_math_int.h" />
+    <ClInclude Include="agg\agg_math_stroke.h" />
+    <ClInclude Include="agg\agg_math_stroke_int.h" />
+    <ClInclude Include="agg\agg_path_length.h" />
+    <ClInclude Include="agg\agg_path_storage.h" />
+    <ClInclude Include="agg\agg_path_storage_integer.h" />
+    <ClInclude Include="agg\agg_pattern_filters_rgba.h" />
+    <ClInclude Include="agg\agg_pixfmt_amask_adaptor.h" />
+    <ClInclude Include="agg\agg_pixfmt_gray.h" />
+    <ClInclude Include="agg\agg_pixfmt_rgb.h" />
+    <ClInclude Include="agg\agg_pixfmt_rgba.h" />
+    <ClInclude Include="agg\agg_pixfmt_rgb_packed.h" />
+    <ClInclude Include="agg\agg_pixfmt_transposer.h" />
+    <ClInclude Include="agg\agg_rasterizer_cells_aa.h" />
+    <ClInclude Include="agg\agg_rasterizer_compound_aa.h" />
+    <ClInclude Include="agg\agg_rasterizer_outline.h" />
+    <ClInclude Include="agg\agg_rasterizer_outline_aa.h" />
+    <ClInclude Include="agg\agg_rasterizer_scanline_aa.h" />
+    <ClInclude Include="agg\agg_rasterizer_scanline_aa_int.h" />
+    <ClInclude Include="agg\agg_rasterizer_sl_clip.h" />
+    <ClInclude Include="agg\agg_renderer_base.h" />
+    <ClInclude Include="agg\agg_renderer_markers.h" />
+    <ClInclude Include="agg\agg_renderer_mclip.h" />
+    <ClInclude Include="agg\agg_renderer_outline_aa.h" />
+    <ClInclude Include="agg\agg_renderer_outline_image.h" />
+    <ClInclude Include="agg\agg_renderer_primitives.h" />
+    <ClInclude Include="agg\agg_renderer_raster_text.h" />
+    <ClInclude Include="agg\agg_renderer_scanline.h" />
+    <ClInclude Include="agg\agg_rendering_buffer.h" />
+    <ClInclude Include="agg\agg_rendering_buffer_dynarow.h" />
+    <ClInclude Include="agg\agg_rounded_rect.h" />
+    <ClInclude Include="agg\agg_scanline_bin.h" />
+    <ClInclude Include="agg\agg_scanline_boolean_algebra.h" />
+    <ClInclude Include="agg\agg_scanline_p.h" />
+    <ClInclude Include="agg\agg_scanline_storage_aa.h" />
+    <ClInclude Include="agg\agg_scanline_storage_bin.h" />
+    <ClInclude Include="agg\agg_scanline_u.h" />
+    <ClInclude Include="agg\agg_shorten_path.h" />
+    <ClInclude Include="agg\agg_shorten_path_int.h" />
+    <ClInclude Include="agg\agg_simul_eq.h" />
+    <ClInclude Include="agg\agg_span_allocator.h" />
+    <ClInclude Include="agg\agg_span_converter.h" />
+    <ClInclude Include="agg\agg_span_gouraud.h" />
+    <ClInclude Include="agg\agg_span_gouraud_gray.h" />
+    <ClInclude Include="agg\agg_span_gouraud_rgba.h" />
+    <ClInclude Include="agg\agg_span_gradient.h" />
+    <ClInclude Include="agg\agg_span_gradient_alpha.h" />
+    <ClInclude Include="agg\agg_span_image_filter.h" />
+    <ClInclude Include="agg\agg_span_image_filter_gray.h" />
+    <ClInclude Include="agg\agg_span_image_filter_rgb.h" />
+    <ClInclude Include="agg\agg_span_image_filter_rgb565.h" />
+    <ClInclude Include="agg\agg_span_image_filter_rgba.h" />
+    <ClInclude Include="agg\agg_span_interpolator_adaptor.h" />
+    <ClInclude Include="agg\agg_span_interpolator_linear.h" />
+    <ClInclude Include="agg\agg_span_interpolator_persp.h" />
+    <ClInclude Include="agg\agg_span_interpolator_trans.h" />
+    <ClInclude Include="agg\agg_span_pattern_gray.h" />
+    <ClInclude Include="agg\agg_span_pattern_rgb.h" />
+    <ClInclude Include="agg\agg_span_pattern_rgba.h" />
+    <ClInclude Include="agg\agg_span_solid.h" />
+    <ClInclude Include="agg\agg_span_subdiv_adaptor.h" />
+    <ClInclude Include="agg\agg_trans_affine.h" />
+    <ClInclude Include="agg\agg_trans_bilinear.h" />
+    <ClInclude Include="agg\agg_trans_double_path.h" />
+    <ClInclude Include="agg\agg_trans_perspective.h" />
+    <ClInclude Include="agg\agg_trans_single_path.h" />
+    <ClInclude Include="agg\agg_trans_viewport.h" />
+    <ClInclude Include="agg\agg_trans_warp_magnifier.h" />
+    <ClInclude Include="agg\agg_vcgen_bspline.h" />
+    <ClInclude Include="agg\agg_vcgen_contour.h" />
+    <ClInclude Include="agg\agg_vcgen_dash.h" />
+    <ClInclude Include="agg\agg_vcgen_dash_int.h" />
+    <ClInclude Include="agg\agg_vcgen_markers_term.h" />
+    <ClInclude Include="agg\agg_vcgen_smooth_poly1.h" />
+    <ClInclude Include="agg\agg_vcgen_stroke.h" />
+    <ClInclude Include="agg\agg_vcgen_stroke_int.h" />
+    <ClInclude Include="agg\agg_vcgen_vertex_sequence.h" />
+    <ClInclude Include="agg\agg_vertex_sequence.h" />
+    <ClInclude Include="agg\agg_vertex_sequence_int.h" />
+    <ClInclude Include="agg\agg_vpgen_clip_polygon.h" />
+    <ClInclude Include="agg\agg_vpgen_clip_polyline.h" />
+    <ClInclude Include="agg\agg_vpgen_segmentator.h" />
+    <ClInclude Include="agg\polygon_clipper.h" />
+    <ClInclude Include="agg\sin_cos_table.h" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="DisplayMath.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="GraphTypes.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Pen.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Rect.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="agg\agg_arc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_arrowhead.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_bezier_arc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_bspline.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_curves.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_embedded_raster_fonts.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_font_freetype.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_gsv_text.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_image_filters.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_line_aa_basics.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_line_profile_aa.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_math_int.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_rounded_rect.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_sqrt_tables.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_trans_affine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_trans_double_path.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_trans_single_path.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_trans_warp_magnifier.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_bspline.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_contour.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_dash.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_dash_int.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_markers_term.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_smooth_poly1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_stroke.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vcgen_stroke_int.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vpgen_clip_polygon.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vpgen_clip_polyline.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\agg_vpgen_segmentator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\polygon_clipper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="agg\sin_cos_table.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Display.cpp" />
+    <ClCompile Include="DisplayMath.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Pen.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Rect.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

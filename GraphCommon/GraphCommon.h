@@ -8,9 +8,7 @@ namespace GraphEngine
 {
 	namespace GraphCommon
 	{
-
 		typedef std::shared_ptr<class ISerializeObj> ISerializeObjPtr;
-
 
 		class ISerializeObj
 		{
